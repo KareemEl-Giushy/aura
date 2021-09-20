@@ -1,4 +1,5 @@
 import firebase from '@/config/firebase'
+// import { reject } from 'core-js/fn/promise';
 
 let appservice = {
   getTeam: () => {
@@ -20,6 +21,34 @@ let appservice = {
             resolve({
               success: true,
               data: team
+            })
+          }
+        })
+        .catch(e => {
+          reject(e)
+        });
+    })
+  },
+
+  getPackages () {
+    let pacakges = []
+    return new Promise((resolve, reject) => {
+      firebase.firestore.collection("packages")
+        .get()
+        .then(doc => {
+          if (doc.empty) {
+            resolve({
+              success: false,
+              data: {}
+            })
+          }
+          if (Object.keys(doc).length > 0) {
+            doc.forEach(res => {
+              pacakges.push(res.data())
+            })
+            resolve({
+              success: true,
+              data: pacakges
             })
           }
         })

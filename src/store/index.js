@@ -52,6 +52,15 @@ export default new Vuex.Store({
         },
       },
       {
+        text: 'Packages',
+        to: '/packages',
+        icon: 'mdi-package',
+        meta: {
+          showToolbar: true,
+          showBottomNav: true
+        },
+      },
+      {
         text: 'About',
         to: '/about',
         icon: 'mdi-comment-alert',

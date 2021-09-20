@@ -138,6 +138,15 @@ const routes = [{
     }
   },
   {
+    path: '/packages',
+    name: 'Packages',
+    component: () => import( /* webpackChunkName: "packages" */ '../views/Packages.vue'),
+    meta: {
+      title: 'Packages ',
+      color: '#0277bd',
+    }
+  },
+  {
     path: '/volunteers',
     name: 'Volunteers',
     component: () => import( /* webpackChunkName: "volunteer" */ '../views/Volunteer.vue'),
