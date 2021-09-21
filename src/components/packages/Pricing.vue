@@ -39,7 +39,7 @@
                 </ul>
               </div>
               <div class="generic_price_btn clearfix">
-                <a class="" href="">Choose</a>
+                <a class="" :href="d.form" target="_blank">Choose</a>
               </div>
             </div>
           </div>
