@@ -11,7 +11,9 @@ module.exports = {
     parser: 'babel-eslint'
   },
   rules: {
+    "no-mixed-spaces-and-tabs": 0,
     "no-console": "off",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+
   }
 }
